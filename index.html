@@ -1,10 +1,461 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
+
 <head>
-  <title>HHW</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小何才露尖尖角</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <header>
+        <div class="header-content">
+            <h1>小何才露尖尖角</h1>
+            <div class="datetime">
+                <div class="date" id="date"></div>
+                <div class="time" id="time"></div>
+            </div>
+        </div>
+    </header>
+    <div class="weather-widget">
+        <div class="weather">
+            <div class="weather-info">
+                <span id="weather-temp"></span>
+                <span id="weather-text"></span>
+                <img id="weather-icon" src="" alt="天气图标" style="display: none;">
+            </div>
+            <div class="weather-city" id="weather-city"></div>
+        </div>
+    </div>
+    <main>
+        <div class="grid">
+            <div class="category">
+                <div class="category-header">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09997 22C7.78997 22.05 6.79997 20.68 5.95997 19.47C4.24997 17 2.93997 12.45 4.69997 9.39C5.56997 7.87 7.12997 6.91 8.81997 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z" />
+                    </svg>
+                    <h2>苹果专区</h2>
+                </div>
+                <div class="links">
+                    <a href="https://www.apple.com.cn" target="_blank">
+                        <div class="link-header">
+                            <img src="https://www.apple.com/favicon.ico" alt="苹果中国" class="favicon">
+                            <span class="link-title">苹果中国大陆</span>
+                        </div>
+                        <div class="link-url">https://www.apple.com.cn</div>
+                        <div class="link-description">Apple中国大陆官方网站，提供最新产品信息和在线购买服务。</div>
+                    </a>
+                    <a href="https://www.apple.com.cn/shop/refurbished" target="_blank">
+                        <div class="link-header">
+                            <img src="https://www.apple.com/favicon.ico" alt="苹果官翻" class="favicon">
+                            <span class="link-title">官方翻新商城</span>
+                        </div>
+                        <div class="link-url">https://www.apple.com.cn/shop/refurbished</div>
+                        <div class="link-description">Apple官方认证翻新产品，享受与新品相同的保修服务。</div>
+                    </a>
+                    <a href="https://www.apple.com/hk" target="_blank">
+                        <div class="link-header">
+                            <img src="https://www.apple.com/favicon.ico" alt="苹果香港" class="favicon">
+                            <span class="link-title">苹果中国香港</span>
+                        </div>
+                        <div class="link-url">https://www.apple.com/hk</div>
+                        <div class="link-description">Apple香港官方网站，提供港版产品信息和在线购买服务。</div>
+                    </a>
+                    <a href="https://www.apple.com" target="_blank">
+                        <div class="link-header">
+                            <img src="https://www.apple.com/favicon.ico" alt="苹果美国" class="favicon">
+                            <span class="link-title">苹果美国</span>
+                        </div>
+                        <div class="link-url">https://www.apple.com</div>
+                        <div class="link-description">Apple美国官方网站，提供最新产品发布和创新科技资讯。</div>
+                    </a>
+                    <a href="https://www.apple.com/jp" target="_blank">
+                        <div class="link-header">
+                            <img src="https://www.apple.com/favicon.ico" alt="苹果日本" class="favicon">
+                            <span class="link-title">苹果日本</span>
+                        </div>
+                        <div class="link-url">https://www.apple.com/jp</div>
+                        <div class="link-description">Apple日本官方网站，提供日本地区特色产品和服务。</div>
+                    </a>
+                </div>
+            </div>
+            <div class="category">
+                <div class="category-header">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="9" height="9" />
+                        <rect x="13" y="2" width="9" height="9" />
+                        <rect x="2" y="13" width="9" height="9" />
+                        <rect x="13" y="13" width="9" height="9" />
+                    </svg>
+                    <h2>微软专区</h2>
+                </div>
+                <div class="links">
+                    <a href="https://www.microsoft.com/zh-cn" target="_blank">
+                        <div class="link-header">
+                            <img src="https://www.microsoft.com/favicon.ico" alt="微软中国" class="favicon">
+                            <span class="link-title">微软中国大陆</span>
+                        </div>
+                        <div class="link-url">https://www.microsoft.com/zh-cn</div>
+                        <div class="link-description">微软中国官方网站，提供Windows、Office等产品及服务。</div>
+                    </a>
+                    <a href="https://www.microsoft.com/zh-cn/surface/buy/certified-refurbished" target="_blank">
+                        <div class="link-header">
+                            <img src="https://www.microsoft.com/favicon.ico" alt="微软官翻" class="favicon">
+                            <span class="link-title">微软官方翻新</span>
+                        </div>
+                        <div class="link-url">https://www.microsoft.com/zh-cn/surface/buy/certified-refurbished</div>
+                        <div class="link-description">微软认证翻新Surface产品，享受优惠价格和官方保修。</div>
+                    </a>
+                </div>
+            </div>
+            <div class="category">
+                <div class="category-header">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                        <path d="M19.5 8.4v-2h-15v2h6.3v11.5h2.5V8.4z"/>
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" style="opacity: 0"/>
+                    </svg>
+                    <h2>特斯拉专区</h2>
+                </div>
+                <div class="links">
+                    <a href="https://www.tesla.cn" target="_blank">
+                        <div class="link-header">
+                            <img src="https://digitalassets.tesla.cn/co1n/image/upload/f_auto,q_auto/prod/shared/icons/favicon-32x32.png" alt="特斯拉中国" class="favicon">
+                            <span class="link-title">特斯拉中国</span>
+                        </div>
+                        <div class="link-url">https://www.tesla.cn</div>
+                        <div class="link-description">特斯拉中国官方网站，提供电动汽车产品信息和在线购买服务。</div>
+                    </a>
+                    <a href="https://www.tesla.cn/inventory/used/my" target="_blank">
+                        <div class="link-header">
+                            <img src="https://digitalassets.tesla.cn/co1n/image/upload/f_auto,q_auto/prod/shared/icons/favicon-32x32.png" alt="特斯拉认证二手车" class="favicon">
+                            <span class="link-title">特斯拉认证二手车</span>
+                        </div>
+                        <div class="link-url">https://www.tesla.cn/inventory/used/my</div>
+                        <div class="link-description">特斯拉官方认证二手车，享受优质保障和专业服务。</div>
+                    </a>
+                </div>
+            </div>
+            <div class="category">
+                <div class="category-header">
+                    <svg class="icon" width="24" height="24" viewBox="0 0 24 24">
+                        <g fill="currentColor">
+                            <path
+                                d="M10.1 23.2c-3.6-.12-5.64-.77-7.17-2.28-.54-.53-.88-.99-1.23-1.67-.61-1.17-.92-2.45-1.09-4.45-.06-.71-.08-4.27-.03-5.22.08-1.63.21-2.55.5-3.6.7-2.55 2.39-4.26 4.94-5 .77-.23 1.71-.39 2.77-.48 1.85-.16 5.54-.11 7.07.09 2.04.27 3.48.82 4.63 1.78 1.62 1.35 2.42 3.17 2.69 6.09.15 1.64.16 4.76.02 6.58-.21 2.75-.96 4.6-2.4 5.97-1.4 1.33-3.26 1.97-6.26 2.15-.79.05-3.45.07-4.46.03zm-3.01-7.21c.03-.03.04-.83.04-3.39v-3.35l.07-.04c.05-.03.63-.03 2.08-.02 1.69.01 2.06.02 2.3.07.72.14 1.02.43 1.18 1.13.07.29.07.45.08 2.96l.02 2.65.07.02h.93l.86-.01v-2.76c0-2.13-.01-2.84-.04-3.1-.15-1.13-.53-1.81-1.18-2.11-.44-.21-.98-.34-1.68-.4-.59-.05-6.52-.05-6.58.01-.06.06-.06 8.29 0 8.35.06.06 1.78.06 1.84 0zm3.88-.02c.02-.04.03-.89.03-2.5 0-2.17-.01-2.44-.05-2.49-.04-.05-.18-.05-.94-.05-.55 0-.92.01-.96.03-.07.03-.07.1-.07 2.51 0 1.88.01 2.49.04 2.52.03.03.29.04.98.04.89 0 .94 0 .97-.07zm7.54 0c.02-.04.03-1.4.03-4.15 0-2.75-.01-4.11-.03-4.15-.03-.06-.08-.07-.94-.07-.79 0-.91.01-.93.05-.03.08-.03 8.33 0 8.36.01.01.43.02.92.02.86 0 .91 0 .94-.07z"/>
+                        </g>
+                        <g fill="none">
+                            <path
+                                d="M0 12V0h24v24H0V12zm14.45 11.07c2.99-.18 4.86-.82 6.26-2.15 1.27-1.21 1.96-2.69 2.27-4.91.31-2.14.3-6.35-.01-8.45-.34-2.31-1.15-3.89-2.57-5.08-1.15-.96-2.59-1.51-4.63-1.78-1.53-.2-5.05-.24-6.87-.09-1.06.09-2 .25-2.77.48-2.55.74-4.24 2.45-4.94 5-.43 1.55-.56 3.06-.52 6.27.02 1.91.04 2.37.16 3.37.18 1.43.47 2.45.98 3.42.35.67.69 1.13 1.23 1.67 1.53 1.51 3.57 2.16 7.17 2.28.99.03 3.44.01 4.25-.03z"/>
+                            <path
+                                d="M5.15 16.11c-.06-.06-.06-8.5 0-8.56.05-.05 6.19-.06 6.78-.01 1.89.17 2.55.72 2.83 2.38.05.29.06.73.08 3.23.01 1.59.01 2.91-.01 2.94-.02.04-.2.05-1.01.05-.54 0-1-.01-1.03-.03-.03-.02-.04-.71-.05-2.66-.01-2.5-.02-2.66-.08-2.95-.16-.71-.46-.99-1.18-1.13-.24-.05-.61-.06-2.2-.07-1.38-.01-1.93-.01-1.98.02l-.07.04v3.35c0 2.56-.01 3.36-.04 3.39-.06.06-1.99.06-2.04 0z"/>
+                            <path
+                                d="M8.92 16.11c-.03-.03-.04-.66-.04-2.62 0-2.52 0-2.58.07-2.61.04-.02.44-.03 1.06-.03.86 0 1 .01 1.05.05.05.05.05.33.05 2.59 0 1.68-.01 2.56-.03 2.61-.03.06-.08.07-1.07.07-.76 0-1.05-.01-1.08-.04z"/>
+                            <path
+                                d="M16.55 16.13c-.03-.03-.03-8.48 0-8.56.02-.05.14-.05 1.03-.05.96 0 1 .01 1.04.07.02.04.03 1.43.03 4.25 0 2.82-.01 4.21-.03 4.25-.03.06-.08.07-1.04.07-.55 0-1.01-.01-1.02-.02z"/>
+                        </g>
+                    </svg>
+                    <h2>小米专区</h2>
+                </div>
+                <div class="links">
+                    <a href="https://www.mi.com" target="_blank">
+                        <div class="link-header">
+                            <img src="https://www.mi.com/favicon.ico" alt="小米官网" class="favicon">
+                            <span class="link-title">小米官网</span>
+                        </div>
+                        <div class="link-url">https://www.mi.com</div>
+                        <div class="link-description">小米科技官方网站，提供创新科技产品与智能生态系统解决方案。</div>
+                    </a>
+                    <a href="https://www.xiaomiev.com/" target="_blank">
+                        <div class="link-header">
+                            <img src="https://www.xiaomiev.com/favicon.ico" alt="小米汽车" class="favicon">
+                            <span class="link-title">小米汽车</span>
+                        </div>
+                        <div class="link-url">https://www.xiaomiev.com/</div>
+                        <div class="link-description">小米汽车官方网站，提供小米SU7系列电动汽车产品信息和在线购买服务。</div>
+                    </a>
+                    <a href="https://www.mi.com" target="_blank">
+                        <div class="link-header">
+                            <img src="https://www.mi.com/favicon.ico" alt="小米官网" class="favicon">
+                            <span class="link-title">小米商城</span>
+                        </div>
+                        <div class="link-url">https://www.mi.com/shop</div>
+                        <div class="link-description">小米官方商城，提供小米全系列产品以及生态链产品的购买服务。</div>
+                    </a>
+                    <a href="https://www.xiaomiyoupin.com" target="_blank">
+                        <div class="link-header">
+                            <img src="https://cnbj1.fds.api.xiaomi.com/mijia-m/trade_common/yp_logo.png" alt="小米有品" class="favicon">
+                            <span class="link-title">小米有品</span>
+                        </div>
+                        <div class="link-url">https://www.xiaomiyoupin.com</div>
+                        <div class="link-description">小米生态链产品商城，提供高品质生活消费产品。</div>
+                    </a>
+                </div>
+            </div>
+            <div class="category">
+                <div class="category-header">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                    <h2>视频娱乐</h2>
+                </div>
+                <div class="links">
+                    <a href="https://www.bilibili.com" target="_blank">
+                        <div class="link-header">
+                            <img src="https://www.bilibili.com/favicon.ico" alt="bilibili" class="favicon">
+                            <span class="link-title">bilibili</span>
+                        </div>
+                        <div class="link-url">https://www.bilibili.com</div>
+                        <div class="link-description">国内最大的二次元视频网站，提供动漫、游戏、生活等多元化内容。</div>
+                    </a>
+                    <a href="https://www.youku.com" target="_blank">
+                        <div class="link-header">
+                            <img src="https://www.youku.com/favicon.ico" alt="优酷" class="favicon">
+                            <span class="link-title">优酷</span>
+                        </div>
+                        <div class="link-url">https://www.youku.com</div>
+                        <div class="link-description">国内领先的视频网站，提供电影、电视剧、综艺等丰富的视频内容。</div>
+                    </a>
+                    <a href="https://v.qq.com" target="_blank">
+                        <div class="link-header">
+                            <img src="https://v.qq.com/favicon.ico" alt="腾讯视频" class="favicon">
+                            <span class="link-title">腾讯视频</span>
+                        </div>
+                        <div class="link-url">https://v.qq.com</div>
+                        <div class="link-description">腾讯旗下视频平台，提供独家综艺、电视剧和体育赛事直播等。</div>
+                    </a>
+                    <a href="https://www.mgtv.com" target="_blank">
+                        <div class="link-header">
+                            <img src="https://www.mgtv.com/favicon.ico" alt="芒果TV" class="favicon">
+                            <span class="link-title">芒果TV</span>
+                        </div>
+                        <div class="link-url">https://www.mgtv.com</div>
+                        <div class="link-description">湖南广电旗下视频平台，提供独家综艺节目和电视剧。</div>
+                    </a>
+                    <a href="https://www.iqiyi.com" target="_blank">
+                        <div class="link-header">
+                            <img src="https://www.iqiyi.com/favicon.ico" alt="爱奇艺" class="favicon">
+                            <span class="link-title">爱奇艺</span>
+                        </div>
+                        <div class="link-url">https://www.iqiyi.com</div>
+                        <div class="link-description">国内领先的视频平台，提供丰富的影视剧和原创内容。</div>
+                    </a>
+                    <a href="https://www.douyin.com" target="_blank">
+                        <div class="link-header">
+                            <img src="https://www.douyin.com/favicon.ico" alt="抖音" class="favicon">
+                            <span class="link-title">抖音</span>
+                        </div>
+                        <div class="link-url">https://www.douyin.com</div>
+                        <div class="link-description">国内领先的短视频平台，提供丰富的短视频内容和直播服务。</div>
+                    </a>
+                    <a href="https://www.xiaohongshu.com" target="_blank">
+                        <div class="link-header">
+                            <img src="https://www.xiaohongshu.com/favicon.ico" alt="小红书" class="favicon">
+                            <span class="link-title">小红书</span>
+                        </div>
+                        <div class="link-url">https://www.xiaohongshu.com</div>
+                        <div class="link-description">生活方式分享社区，提供美食、旅行、美妆等多样化内容。</div>
+                    </a>
+                </div>
+            </div>
+            <div class="category">
+                <div class="category-header">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                    </svg>
+                    <h2>购物</h2>
+                </div>
+                <div class="links">
+                    <a href="https://www.taobao.com" target="_blank">
+                        <div class="link-header">
+                            <img src="https://www.taobao.com/favicon.ico" alt="淘宝" class="favicon">
+                            <span class="link-title">淘宝</span>
+                        </div>
+                        <div class="link-url">https://www.taobao.com</div>
+                        <div class="link-description">中国最大的网购平台，汇集各类商品，支持个人和商家经营。</div>
+                    </a>
+                    <a href="https://www.jd.com" target="_blank">
+                        <div class="link-header">
+                            <img src="https://www.jd.com/favicon.ico" alt="京东" class="favicon">
+                            <span class="link-title">京东</span>
+                        </div>
+                        <div class="link-url">https://www.jd.com</div>
+                        <div class="link-description">自营为主的电商平台，以快速配送和售后服务著称。</div>
+                    </a>
+                </div>
+            </div>
+            <div class="category">
+                <div class="category-header">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                    </svg>
+                    <h2>搜索引擎</h2>
+                </div>
+                <div class="links">
+                    <a href="https://www.baidu.com" target="_blank">
+                        <div class="link-header">
+                            <img src="https://www.baidu.com/favicon.ico" alt="百度" class="favicon">
+                            <span class="link-title">百度</span>
+                        </div>
+                        <div class="link-url">https://www.baidu.com</div>
+                        <div class="link-description">中国最大的搜索引擎，提供网页、图片、视频等多元化搜索服务。</div>
+                    </a>
+                    <a href="https://www.google.com" target="_blank">
+                        <div class="link-header">
+                            <img src="https://www.google.com/favicon.ico" alt="谷歌" class="favicon">
+                            <span class="link-title">谷歌</span>
+                        </div>
+                        <div class="link-url">https://www.google.com</div>
+                        <div class="link-description">全球最大的搜索引擎，提供精准的搜索结果和丰富的在线服务。</div>
+                    </a>
+                    <a href="https://www.bing.com" target="_blank">
+                        <div class="link-header">
+                            <img src="https://www.bing.com/favicon.ico" alt="必应" class="favicon">
+                            <span class="link-title">必应</span>
+                        </div>
+                        <div class="link-url">https://www.bing.com</div>
+                        <div class="link-description">微软旗下的搜索引擎，提供智能搜索和AI对话等创新功能。</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="night-mode-toggle">
+        <label for="night-mode">夜间模式</label>
+        <input type="checkbox" id="night-mode" name="night-mode">
+    </div>
+    <script>
+        // 从localStorage读取设置，如果没有值则默认为false
+        let isManuallyToggled = localStorage.getItem('isManuallyToggled') !== null ?
+            localStorage.getItem('isManuallyToggled') === 'true' : false;
+        let savedNightMode = localStorage.getItem('isNight') === 'true';
+
+        function updateDateTime() {
+            const now = new Date();
+
+            // 更新日期
+            const dateOptions = {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            };
+            const weekOptions = {
+                weekday: 'long'
+            };
+            document.getElementById('date').textContent =
+                now.toLocaleDateString('zh-CN', dateOptions) + " " + now.toLocaleDateString('zh-CN', weekOptions);
+
+            // 更新时间
+            const timeOptions = {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            };
+            document.getElementById('time').textContent = now.toLocaleTimeString('zh-CN', timeOptions);
+        }
+
+        // 初始更新
+        updateDateTime();
+
+        // 每秒更新一次
+        setInterval(updateDateTime, 1000);
+
+        function toggleNightMode(isNight) {
+            if (isNight) {
+                document.body.classList.add('night-mode');
+            } else {
+                document.body.classList.remove('night-mode');
+            }
+            // 保存夜间模式状态
+            localStorage.setItem('isNight', isNight);
+        }
+
+        document.getElementById('night-mode').addEventListener('change', function() {
+            isManuallyToggled = true;
+            // 保存手动切换标记
+            localStorage.setItem('isManuallyToggled', 'true');
+            toggleNightMode(this.checked);
+        });
+
+        function checkAutoNightMode() {
+            if (isManuallyToggled) return;
+
+            const now = new Date();
+            const hour = now.getHours();
+            const isNight = hour >= 19 || hour < 6;
+            document.getElementById('night-mode').checked = isNight;
+            toggleNightMode(isNight);
+        }
+
+        // 初始化页面时，根据存储的设置应用夜间模式
+        if (isManuallyToggled) {
+            document.getElementById('night-mode').checked = savedNightMode;
+            toggleNightMode(savedNightMode);
+        } else {
+            checkAutoNightMode();
+        }
+
+        // 每分钟检查一次
+        setInterval(checkAutoNightMode, 60000);
+
+        // 添加天气相关代码
+        async function getWeather() {
+            try {
+                // 先获取用户位置
+                const position = await new Promise((resolve, reject) => {
+                    navigator.geolocation.getCurrentPosition(resolve, reject);
+                });
+
+                const {
+                    latitude,
+                    longitude
+                } = position.coords;
+
+                // 使用 OpenWeather API
+                const OPEN_WEATHER_API_KEY = '4c998323e90eee2ea8e78871cde3d785';
+
+                // 获取天气信息
+                const weatherResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${OPEN_WEATHER_API_KEY}&units=metric&lang=zh_cn`);
+
+                if (!weatherResponse.ok) {
+                    throw new Error(`Weather API error: ${weatherResponse.status} - ${await weatherResponse.text()}`);
+                }
+
+                const weatherData = await weatherResponse.json();
+
+                if (weatherData.cod === 200) {
+                    // 更新温度和天气描述
+                    document.getElementById('weather-temp').textContent = `${Math.round(weatherData.main.temp)}°C`;
+                    document.getElementById('weather-text').textContent = weatherData.weather[0].description;
+
+                    // 更新天气图标
+                    const iconCode = weatherData.weather[0].icon;
+                    document.getElementById('weather-icon').src = `https://openweathermap.org/img/wn/${iconCode}@4x.png`;
+                    document.getElementById('weather-icon').style.display = 'inline';
+
+                    // 更新城市名称（使用API返回的城市名）
+                    document.getElementById('weather-city').textContent = weatherData.name;
+                }
+            } catch (error) {
+                console.error('获取天气信息失败:', error);
+                // 显示错误信息
+                document.getElementById('weather-temp').textContent = '获取失败';
+                document.getElementById('weather-text').textContent = error.message || '';
+                document.getElementById('weather-icon').style.display = 'none';
+                document.getElementById('weather-city').textContent = '请检查API密钥';
+            }
+        }
+
+        // 初始获取天气
+        getWeather();
+
+        // 每30分钟更新一次天气
+        setInterval(getWeather, 30 * 60 * 1000);
+    </script>
 </body>
+
 </html>
